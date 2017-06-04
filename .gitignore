@@ -80,9 +80,6 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-.gitignore
 .idea/
 .settings/
 note-storage.iml
-pom.xml
-src/

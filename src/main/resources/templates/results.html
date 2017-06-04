@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Result</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', '/get-results/' + document.getElementById('owner').value, true);
+                xhr.send();
+                xhr.onreadystatechange = function () {
+                    var data = JSON.parse(this.responseText);
+                    $.each(data, function (i, element) {
+                        $.each(element, function (i, field) {
+                            if (field !== "404") {
+                                $("div").append(field + ' <br/> ');
+                            }
+                        });
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<h3>Enter your name, please:</h3>
+<input minlength="1" maxlength="250" id="owner" type="text" name="owner" placeholder="Enter your name"/>
+<button type="submit">Get your notes!</button>
+<div></div>
+<br/><br/>
+<a href="/">Get back</a>
+</body>
+</html>
