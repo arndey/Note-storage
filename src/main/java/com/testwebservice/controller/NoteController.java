@@ -10,7 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class WelcomeController {
+public class NoteController {
     @Autowired
     private NoteDao noteDao;
 
