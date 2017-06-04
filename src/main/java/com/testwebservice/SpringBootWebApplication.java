@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2017 The Open Source Project
+ */
+
 package com.testwebservice;
 
 import org.springframework.boot.SpringApplication;

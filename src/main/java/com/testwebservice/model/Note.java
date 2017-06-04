@@ -1,10 +1,15 @@
+/*
+ * Copyright (C) 2017 The Open Source Project
+ */
+
 package com.testwebservice.model;
 
 import javax.persistence.*;
+
 import java.util.Date;
 
 /**
- * Created by kosty on 03.06.2017.
+ * Simple JavaBean object that represent a note.
  */
 @Entity
 public class Note {
